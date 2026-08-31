@@ -2,152 +2,618 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>336:60 Haeundae | 336-Hour Dry-Aged Pork K-BBQ Street Food in Busan</title>
-  <meta name="description" content="336:60 is a premium Haeundae street-food destination on the 1st floor of the CGV building on Gunam-ro. Discover 336-hour dry-aged Gimhae local pork, in-house smoked K-BBQ, Busan-inspired sauces, Wang Gogi Jeonbyeong, and fresh daily soy milk.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#ef6a27">
-  <!-- 배포 도메인이 정해지면 아래 canonical 주석을 풀고 주소를 교체하세요. -->
-  <!-- <link rel="canonical" href="https://YOUR-DOMAIN.com/"> -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="336:60 Haeundae | 336-Hour Dry-Aged Pork K-BBQ Street Food in Busan">
-  <meta property="og:description" content="Located on the 1st floor of the Haeundae Gunam-ro CGV building, 336:60 serves 336-hour dry-aged local pork, smoked in-house and wrapped into a signature Busan-style street food experience.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>336:60 Haeundae | Dry-Aged Pork K-BBQ Street Food in Busan</title>
+  <meta name="description" content="336:60 in Haeundae, Busan serves Wang Gogi Jeonbyeong made with Gimhae local pork dry-aged for 336 hours, smoked in-house, and paired with Busan-inspired sauces and fresh daily soy milk.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#ef681f">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="336:60 Haeundae | Slow 336, Fast 60">
+  <meta property="og:description" content="336 hours of dry aging. In-house smoke. Busan local flavor. Discover 336:60 on Haeundae Gunam-ro.">
   <meta property="og:image" content="images/33660-wrap-cheese.webp">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:locale:alternate" content="zh_TW">
 
-  <!--
-    이미지 파일 예시
-    images/33660-wrap-cheese.webp      : 치즈소스 전병 사진
-    images/33660-wrap-spicy.webp       : 불닭소스 전병 사진
-    images/33660-soymilk.webp          : 또우장 사진
-    images/33660-interior.webp         : 매장 내부 사진
-    images/33660-sign.webp             : 간판 사진
-    images/33660-dryaging.webp         : 숙성 고기 근접 사진
-    images/33660-dryaging-window.webp  : 유리창 문구 + 숙성고 사진
-  -->
-
   <style>
     :root{
-      --orange:#ef6a27;
-      --orange-2:#ff8a47;
-      --navy:#132238;
-      --navy-2:#0f1b2d;
-      --cream:#f5efe7;
-      --paper:#fffdfa;
-      --ink:#1a1a1a;
-      --muted:#6d6a67;
-      --line:#eadfce;
-      --soft:#fff5ed;
-      --shadow:0 28px 70px rgba(21, 24, 31, .12);
-      --max:560px;
+      --orange:#ef681f;
+      --orange-bright:#ff7d2c;
+      --orange-soft:#fff1e7;
+      --navy:#122238;
+      --navy-soft:#203552;
+      --cream:#f4ede3;
+      --paper:#fffdf9;
+      --ink:#171717;
+      --muted:#69645e;
+      --line:#eadfd3;
+      --white:#fff;
+      --shadow:0 26px 80px rgba(21,31,43,.12);
+      --radius:28px;
+      --content:560px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
       color:var(--ink);
-      font-family:Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Noto Sans JP", "Noto Sans TC", Arial, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(239,106,39,.12), transparent 28%),
-        linear-gradient(180deg, #f6f1ea 0%, #eee6dc 100%);
-      line-height:1.62;
+        radial-gradient(circle at 15% 0%, rgba(239,104,31,.13), transparent 28rem),
+        linear-gradient(180deg,#f7f2eb 0%,#eee7dd 100%);
+      font-family:Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Noto Sans JP", "Noto Sans TC", Arial, sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
     }
-    img{display:block;max-width:100%}
+
     a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;max-width:100%}
     button{font:inherit}
-    .shell{
-      width:min(100%, var(--max));
-      margin:18px auto;
-      background:rgba(255,253,250,.96);
-      border:1px solid rgba(255,255,255,.8);
-      box-shadow:var(--shadow);
-      border-radius:38px;
+
+    .page{
+      width:min(100%,var(--content));
+      margin:20px auto;
       overflow:hidden;
+      border-radius:38px;
+      background:var(--paper);
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.75);
     }
+
     .topbar{
-      position:sticky;top:0;z-index:20;
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding:14px 18px;
-      background:rgba(255,253,250,.9);
+      position:sticky;
+      top:0;
+      z-index:50;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:13px 16px;
+      background:rgba(255,253,249,.94);
       backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(234,223,206,.9);
+      border-bottom:1px solid rgba(234,223,211,.9);
     }
-    .brand{display:flex;align-items:center;gap:10px;min-width:0}
-    .brand-mark{width:38px;height:38px;border-radius:12px;background:var(--navy);color:var(--orange);display:grid;place-items:center;font-weight:900;font-size:12px;letter-spacing:.06em}
-    .brand-copy strong{display:block;font-size:14px;letter-spacing:-.03em}
-    .brand-copy span{display:block;font-size:11px;color:#81786d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .lang-switch{display:flex;gap:6px;background:#f2ece4;padding:4px;border-radius:999px;flex-shrink:0}
-    .lang-switch button{border:0;background:transparent;color:#736e67;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:900;cursor:pointer}
-    .lang-switch button.active{background:var(--navy);color:#fff}
-    .nav-shortcuts{display:flex;gap:8px;padding:0 18px 14px;flex-wrap:wrap}
-    .pill{padding:8px 12px;border-radius:999px;background:#f4ede5;border:1px solid var(--line);font-size:12px;font-weight:800;color:var(--navy)}
-    .hero{padding:0 18px 6px}
-    .hero-card{position:relative;border-radius:30px;overflow:hidden;background:var(--navy);isolation:isolate}
-    .hero-card img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(1.02) contrast(1.03)}
-    .hero-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.72))}
-    .hero-badge{position:absolute;top:16px;left:16px;z-index:1;background:rgba(255,255,255,.94);color:var(--navy);border-radius:999px;padding:8px 12px;font-size:11px;font-weight:900;letter-spacing:.08em}
-    .hero-copy{position:absolute;left:20px;right:20px;bottom:20px;z-index:1;color:#fff}
-    .hero-copy .eyebrow{display:block;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#ffd3bf;margin-bottom:8px}
-    .hero-copy h1{margin:0;font-size:39px;line-height:1.02;letter-spacing:-.06em}
-    .hero-copy p{margin:12px 0 0;color:rgba(255,255,255,.86);font-size:14px}
-    .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
-    .cta-btn{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:16px;font-size:13px;font-weight:900;padding:12px 14px;text-align:center}
-    .cta-primary{background:var(--orange);color:#fff}
-    .cta-secondary{background:rgba(255,255,255,.96);color:var(--navy)}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;padding:16px 18px 4px}
-    .chip{padding:8px 12px;border-radius:999px;background:#fff7f1;border:1px solid #f2d6c5;color:#9a4f24;font-size:12px;font-weight:900}
-    section{padding:18px}
-    .section-head{margin-bottom:14px}
-    .section-head .eyebrow{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
-    .section-head h2{margin:0 0 8px;font-size:28px;line-height:1.12;letter-spacing:-.045em}
-    .section-head p{margin:0;color:var(--muted);font-size:14px}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .feature-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;min-height:170px}
-    .feature-card:nth-child(2){background:linear-gradient(160deg, #132238, #1c2e49);color:#fff;border-color:#20314c}
-    .feature-card strong{display:block;font-size:18px;line-height:1.15;letter-spacing:-.03em;margin-bottom:7px}
-    .feature-card p{margin:0;font-size:13px;color:inherit;opacity:.88}
-    .gallery{display:grid;gap:12px}
-    .menu-card,.gallery-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden}
-    .menu-card img,.gallery-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
-    .menu-body,.gallery-copy{padding:16px}
-    .menu-body .tag{display:inline-block;margin-bottom:10px;padding:6px 10px;border-radius:999px;background:#fff4eb;border:1px solid #f5d6c3;color:#a65425;font-size:11px;font-weight:900}
-    .menu-body strong,.gallery-copy strong{display:block;font-size:18px;line-height:1.15;letter-spacing:-.03em;margin-bottom:8px}
-    .menu-body p,.gallery-copy p{margin:0;font-size:13px;color:var(--muted)}
-    .story-box{border:1px solid var(--line);background:#fff;border-radius:28px;padding:22px}
-    .story-box p{margin:0;color:#4a4641;font-size:14px}
-    .story-box p + p{margin-top:14px}
-    .location-box{border:1px solid var(--line);border-radius:28px;background:#fff;overflow:hidden}
-    .address-wrap{padding:22px 20px 14px}
-    .address-item{padding:14px 0;border-top:1px solid #efe4d8}
-    .address-item:first-child{padding-top:0;border-top:0}
-    .address-label{display:block;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
-    .address-value{font-size:15px;font-weight:700;color:var(--navy)}
-    .action-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-    .action-grid a{display:flex;justify-content:center;align-items:center;min-height:46px;border-radius:14px;font-size:13px;font-weight:900}
-    .map-wrap{padding:0 20px 20px}
-    .map-wrap iframe{width:100%;height:320px;border:0;border-radius:20px;display:block}
-    .faq-list{display:grid;gap:10px}
-    .faq-item{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}
-    .faq-item strong{display:block;font-size:16px;line-height:1.2;margin-bottom:7px}
-    .faq-item p{margin:0;font-size:13px;color:var(--muted)}
-    .final-box{border-radius:30px;padding:28px 22px;background:linear-gradient(135deg, #ff8a47, #ef6a27);color:#fff;text-align:center}
-    .final-box h2{margin:0 0 10px;font-size:31px;line-height:1.06;letter-spacing:-.05em}
-    .final-box p{margin:0 auto 18px;max-width:420px;font-size:14px;color:rgba(255,255,255,.88)}
-    .final-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .final-actions a{display:flex;justify-content:center;align-items:center;min-height:50px;border-radius:15px;font-size:13px;font-weight:900}
-    .final-actions a:first-child{background:#fff;color:var(--navy)}
-    .final-actions a:last-child{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.28)}
-    footer{padding:0 20px 26px;text-align:center;font-size:11px;color:#9d948a}
-    [data-i18n]{transition:opacity .18s ease}
-    .fade{opacity:.15}
-    @media (max-width:600px){
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      flex:0 0 42px;
+      border-radius:13px;
+      background:var(--navy);
+      color:var(--orange);
+      font-weight:950;
+      font-size:12px;
+      letter-spacing:.02em;
+    }
+
+    .brand-text{
+      min-width:0;
+      line-height:1.2;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:15px;
+      letter-spacing:-.035em;
+      white-space:nowrap;
+    }
+
+    .brand-text span{
+      display:block;
+      margin-top:3px;
+      color:#8b8278;
+      font-size:10px;
+      font-weight:700;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .language{
+      display:flex;
+      flex:0 0 auto;
+      gap:4px;
+      padding:4px;
+      border-radius:999px;
+      background:#f1ebe4;
+    }
+
+    .language button{
+      border:0;
+      padding:7px 9px;
+      border-radius:999px;
+      background:transparent;
+      color:#756f68;
+      cursor:pointer;
+      font-size:11px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .language button.active{
+      background:var(--navy);
+      color:var(--white);
+    }
+
+    .hero{padding:16px 18px 8px}
+
+    .hero-media{
+      position:relative;
+      overflow:hidden;
+      border-radius:26px;
+      background:#0c1117;
+    }
+
+    .hero-media img{
+      aspect-ratio:16/11;
+      object-fit:cover;
+    }
+
+    .hero-tag{
+      position:absolute;
+      top:14px;
+      left:14px;
+      max-width:calc(100% - 28px);
+      padding:8px 11px;
+      border-radius:999px;
+      background:rgba(255,255,255,.93);
+      color:var(--navy);
+      font-size:10px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      box-shadow:0 8px 24px rgba(0,0,0,.12);
+    }
+
+    .hero-copy{
+      padding:24px 4px 6px;
+    }
+
+    .eyebrow{
+      display:block;
+      margin-bottom:8px;
+      color:var(--orange);
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+    }
+
+    .hero h1{
+      margin:0;
+      color:var(--navy);
+      font-size:clamp(34px,8vw,48px);
+      line-height:.98;
+      letter-spacing:-.065em;
+      text-wrap:balance;
+    }
+
+    .hero h1 em{
+      color:var(--orange);
+      font-style:normal;
+    }
+
+    .hero-desc{
+      max-width:480px;
+      margin:15px 0 0;
+      color:#58534e;
+      font-size:14px;
+      line-height:1.72;
+    }
+
+    .hero-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+      margin-top:18px;
+    }
+
+    .btn{
+      min-height:50px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      padding:12px 14px;
+      border-radius:15px;
+      text-align:center;
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .btn.primary{background:var(--orange);color:#fff}
+    .btn.dark{background:var(--navy);color:#fff}
+    .btn.light{background:#f4eee7;color:var(--navy)}
+
+    .brand-strip{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:6px;
+      padding:14px 18px 18px;
+    }
+
+    .brand-stat{
+      min-width:0;
+      padding:12px 6px;
+      border:1px solid var(--line);
+      border-radius:15px;
+      background:#fff;
+      text-align:center;
+    }
+
+    .brand-stat strong{
+      display:block;
+      color:var(--navy);
+      font-size:14px;
+      line-height:1.15;
+      letter-spacing:-.04em;
+    }
+
+    .brand-stat span{
+      display:block;
+      margin-top:4px;
+      color:#91887f;
+      font-size:9px;
+      font-weight:800;
+      line-height:1.2;
+    }
+
+    section.content{padding:24px 18px}
+
+    .section-head{margin-bottom:16px}
+
+    .section-head h2{
+      margin:0;
+      color:var(--navy);
+      font-size:clamp(27px,6vw,34px);
+      line-height:1.08;
+      letter-spacing:-.05em;
+      text-wrap:balance;
+    }
+
+    .section-head p{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .manifesto{
+      position:relative;
+      overflow:hidden;
+      padding:26px 22px;
+      border-radius:28px;
+      background:var(--navy);
+      color:#fff;
+    }
+
+    .manifesto::after{
+      content:"336:60";
+      position:absolute;
+      right:-12px;
+      bottom:-36px;
+      color:rgba(255,255,255,.045);
+      font-size:98px;
+      font-weight:950;
+      letter-spacing:-.08em;
+      pointer-events:none;
+    }
+
+    .manifesto .eyebrow{color:#ffaf87}
+
+    .manifesto h2{
+      position:relative;
+      z-index:1;
+      max-width:440px;
+      margin:0;
+      font-size:32px;
+      line-height:1.05;
+      letter-spacing:-.05em;
+      text-wrap:balance;
+    }
+
+    .manifesto p{
+      position:relative;
+      z-index:1;
+      max-width:450px;
+      margin:13px 0 0;
+      color:rgba(255,255,255,.77);
+      font-size:14px;
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .process-card{
+      min-height:175px;
+      padding:18px;
+      border-radius:23px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+
+    .process-card:nth-child(2){background:var(--orange);color:#fff;border-color:var(--orange)}
+    .process-card:nth-child(4){background:#f1e7da}
+
+    .process-num{
+      display:inline-flex;
+      width:30px;
+      height:30px;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:var(--orange-soft);
+      color:var(--orange);
+      font-size:11px;
+      font-weight:950;
+    }
+
+    .process-card:nth-child(2) .process-num{background:rgba(255,255,255,.18);color:#fff}
+
+    .process-card strong{
+      display:block;
+      margin-top:25px;
+      font-size:18px;
+      line-height:1.12;
+      letter-spacing:-.035em;
+    }
+
+    .process-card p{
+      margin:8px 0 0;
+      color:inherit;
+      opacity:.78;
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    .menu-stack{display:grid;gap:13px}
+
+    .menu-card{
+      overflow:hidden;
+      border-radius:26px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+
+    .menu-card img{
+      aspect-ratio:16/11;
+      object-fit:cover;
+    }
+
+    .menu-card.portrait img{
+      aspect-ratio:4/3;
+      object-fit:contain;
+      background:#f7f5f1;
+      padding:6px;
+    }
+
+    .menu-info{padding:16px 17px 18px}
+
+    .menu-kicker{
+      display:inline-flex;
+      padding:6px 9px;
+      border-radius:999px;
+      background:var(--orange-soft);
+      color:#a14c1c;
+      font-size:10px;
+      font-weight:950;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    .menu-info h3{
+      margin:10px 0 6px;
+      color:var(--navy);
+      font-size:20px;
+      line-height:1.1;
+      letter-spacing:-.04em;
+    }
+
+    .menu-info p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .wide-photo{
+      overflow:hidden;
+      border-radius:27px;
+      background:#111;
+    }
+
+    .wide-photo img{
+      aspect-ratio:16/11;
+      object-fit:cover;
+    }
+
+    .photo-copy{
+      padding:15px 17px 17px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-top:0;
+      border-radius:0 0 27px 27px;
+    }
+
+    .photo-copy strong{
+      display:block;
+      color:var(--navy);
+      font-size:17px;
+      letter-spacing:-.035em;
+    }
+
+    .photo-copy p{
+      margin:5px 0 0;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .brand-story{
+      display:grid;
+      gap:14px;
+      padding:22px;
+      border-radius:28px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+
+    .story-line{
+      padding-bottom:14px;
+      border-bottom:1px solid #eee5dc;
+    }
+
+    .story-line:last-child{padding-bottom:0;border-bottom:0}
+
+    .story-line strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--orange);
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .story-line p{
+      margin:0;
+      color:#4f4a45;
+      font-size:14px;
+      line-height:1.72;
+    }
+
+    .visit-card{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:#fff;
+    }
+
+    .visit-copy{padding:21px 19px 15px}
+
+    .address-label{
+      color:var(--orange);
+      font-size:10px;
+      font-weight:950;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .address{
+      margin-top:6px;
+      color:var(--navy);
+      font-size:16px;
+      font-weight:850;
+      line-height:1.45;
+    }
+
+    .visit-note{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .visit-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+      margin-top:15px;
+    }
+
+    .map{
+      padding:0 14px 14px;
+    }
+
+    .map iframe{
+      display:block;
+      width:100%;
+      height:320px;
+      border:0;
+      border-radius:20px;
+    }
+
+    .final-cta{
+      padding:28px 22px;
+      border-radius:29px;
+      background:linear-gradient(135deg,var(--orange-bright),var(--orange));
+      color:#fff;
+      text-align:center;
+    }
+
+    .final-cta h2{
+      margin:0;
+      font-size:32px;
+      line-height:1.04;
+      letter-spacing:-.055em;
+      text-wrap:balance;
+    }
+
+    .final-cta p{
+      max-width:420px;
+      margin:11px auto 18px;
+      color:rgba(255,255,255,.86);
+      font-size:13px;
+    }
+
+    .final-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+    }
+
+    .final-actions .btn:first-child{background:#fff;color:var(--navy)}
+    .final-actions .btn:last-child{background:rgba(18,34,56,.9);color:#fff}
+
+    footer{
+      padding:0 20px 28px;
+      color:#9f968c;
+      text-align:center;
+      font-size:10px;
+    }
+
+    [data-i18n]{transition:opacity .12s ease}
+    .fade{opacity:.16}
+
+    @media(max-width:600px){
       body{background:var(--paper)}
-      .shell{margin:0 auto;border-radius:0;box-shadow:none;border:0}
-      .hero-copy h1{font-size:35px}
-      .grid-2,.cta-row,.action-grid,.final-actions{grid-template-columns:1fr}
-      .nav-shortcuts{padding-bottom:10px}
+      .page{margin:0;border:0;border-radius:0;box-shadow:none}
+      .topbar{padding-left:14px;padding-right:14px}
+      .brand-mark{width:38px;height:38px;flex-basis:38px}
+      .brand-text strong{font-size:13px}
+      .brand-text span{max-width:145px}
+      .language button{padding:7px 8px;font-size:10px}
+      .hero{padding-left:14px;padding-right:14px}
+      section.content{padding-left:14px;padding-right:14px}
+      .brand-strip{padding-left:14px;padding-right:14px}
+      .hero-copy{padding-left:1px;padding-right:1px}
+    }
+
+    @media(max-width:420px){
+      .brand-text span{display:none}
+      .hero h1{font-size:36px}
+      .hero-desc{font-size:13px}
+      .hero-actions,.visit-actions,.final-actions{grid-template-columns:1fr}
+      .brand-strip{grid-template-columns:1fr 1fr}
+      .process-grid{grid-template-columns:1fr}
+      .process-card{min-height:0}
+      .process-card strong{margin-top:18px}
+    }
+
+    @media(max-width:350px){
+      .brand-text strong{font-size:12px}
+      .language{gap:2px;padding:3px}
+      .language button{padding:6px 6px;font-size:9px}
+      .hero h1{font-size:32px}
     }
   </style>
 
@@ -157,15 +623,15 @@
     "@type":"Restaurant",
     "name":"336:60",
     "alternateName":"삼삼육육공",
-    "description":"336:60 is a Haeundae street-food destination on the 1st floor of the CGV building on Gunam-ro in Busan, serving 336-hour dry-aged Gimhae local pork, in-house smoked K-BBQ, Wang Gogi Jeonbyeong, and fresh daily soy milk.",
+    "description":"Haeundae street food made with Gimhae local pork dry-aged for 336 hours, smoked in-house and served as Wang Gogi Jeonbyeong with Busan-inspired sauces.",
     "servesCuisine":["Korean","K-BBQ","Street Food"],
     "image":[
       "images/33660-wrap-cheese.webp",
       "images/33660-wrap-spicy.webp",
-      "images/33660-soymilk.webp",
-      "images/33660-sign.webp",
       "images/33660-interior.webp",
-      "images/33660-dryaging.webp"
+      "images/33660-sign.webp",
+      "images/33660-dryaging.webp",
+      "images/33660-soymilk.webp"
     ],
     "address":{
       "@type":"PostalAddress",
@@ -177,207 +643,212 @@
     "hasMap":"https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x35688d0049448983%3A0xd5535285b4d77ce3!2z7IK87IK87Jyh7Jyh6rO1!5e0!3m2!1sko!2skr!4v1787994006864!5m2!1sko!2skr"
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"What is 336:60 known for?",
-        "acceptedAnswer":{"@type":"Answer","text":"336:60 is known for Wang Gogi Jeonbyeong made with 336-hour dry-aged Gimhae local pork, in-house smoked K-BBQ flavor, Busan-inspired sauces, and daily fresh soy milk."}
-      },
-      {
-        "@type":"Question",
-        "name":"What makes 336:60 different?",
-        "acceptedAnswer":{"@type":"Answer","text":"336:60 combines same-day butchered local pork from Gimhae, a 336-hour in-store dry-aging process, in-house smoking, sauces inspired by Busan local ingredients, and house-made soy milk called Ttoujang."}
-      },
-      {
-        "@type":"Question",
-        "name":"Where is 336:60 located?",
-        "acceptedAnswer":{"@type":"Answer","text":"336:60 is located on the 1st floor of the CGV building on Haeundae Gunam-ro in Busan, South Korea."}
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
-  <div class="shell">
+  <div class="page">
     <header class="topbar">
-      <div class="brand">
+      <a class="brand" href="#top" aria-label="336:60 home">
         <div class="brand-mark">336</div>
-        <div class="brand-copy">
+        <div class="brand-text">
           <strong>336:60 · 삼삼육육공</strong>
-          <span>Haeundae Gunam-ro CGV Building · 1F</span>
+          <span>Haeundae · Busan</span>
         </div>
-      </div>
-      <div class="lang-switch" aria-label="Language switcher">
-        <button class="active" data-lang="en">EN</button>
-        <button data-lang="jp">日本語</button>
-        <button data-lang="tw">繁中</button>
+      </a>
+      <div class="language" aria-label="Language">
+        <button class="active" type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="jp">日本語</button>
+        <button type="button" data-lang="tw">繁中</button>
       </div>
     </header>
 
-    <div class="nav-shortcuts">
-      <a class="pill" href="#story" data-i18n="navStory">Story</a>
-      <a class="pill" href="#menu" data-i18n="navMenu">Signature</a>
-      <a class="pill" href="#visit" data-i18n="navVisit">Visit</a>
-    </div>
-
-    <main>
+    <main id="top">
       <section class="hero">
-        <div class="hero-card">
-          <img src="images/33660-wrap-cheese.webp" alt="336:60 signature Wang Gogi Jeonbyeong with cheese sauce">
-          <div class="hero-badge">336:60 · Slow → Fast</div>
-          <div class="hero-copy">
-            <span class="eyebrow" data-i18n="heroTag">HAEUNDAE · BUSAN LOCAL STREET FOOD</span>
-            <h1 data-i18n="heroTitle">336 hours of patience.<br>60 seconds of thrill.</h1>
-            <p data-i18n="heroDesc">At 336:60, same-day butchered Gimhae local pork is dry-aged for 336 hours, butchered in-house, smoked into a bold K-BBQ style, and wrapped as a signature Wang Gogi Jeonbyeong in the heart of Haeundae.</p>
-            <div class="cta-row">
-              <a class="cta-btn cta-primary" href="https://www.google.com/maps/search/?api=1&query=336%3A60%20Haeundae%20Gunam-ro%20CGV%20Building" target="_blank" rel="noopener" data-i18n="ctaGoogle">Open Google Maps</a>
-              <a class="cta-btn cta-secondary" href="https://m.place.naver.com/restaurant/2029664983" target="_blank" rel="noopener" data-i18n="ctaNaver">Open Naver Place</a>
-            </div>
+        <div class="hero-media">
+          <img src="images/33660-wrap-cheese.webp" alt="336:60 signature Wang Gogi Jeonbyeong with cheese sauce" fetchpriority="high">
+          <span class="hero-tag" data-i18n="heroTag">HAEUNDAE · BUSAN LOCAL K-BBQ</span>
+        </div>
+        <div class="hero-copy">
+          <span class="eyebrow">336:60 · SLOW / FAST</span>
+          <h1 data-i18n="heroTitle">Slow for <em>336 hours.</em><br>Worth it in 60 seconds.</h1>
+          <p class="hero-desc" data-i18n="heroDesc">Gimhae local pork is dry-aged in-house for 336 hours, butchered and smoked at the shop, then wrapped into our signature Wang Gogi Jeonbyeong. A Busan-born bite made for Haeundae.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#visit" data-i18n="heroVisit">Find us in Haeundae</a>
+            <a class="btn dark" href="#menu" data-i18n="heroMenu">See signature menu</a>
           </div>
         </div>
       </section>
 
-      <div class="chips">
-        <span class="chip" data-i18n="chip1">336h Dry Aging</span>
-        <span class="chip" data-i18n="chip2">Gimhae Local Pork</span>
-        <span class="chip" data-i18n="chip3">Smoked K-BBQ</span>
-        <span class="chip" data-i18n="chip4">Daily Soy Milk</span>
+      <div class="brand-strip" aria-label="336:60 highlights">
+        <div class="brand-stat"><strong>336H</strong><span data-i18n="stat1">DRY AGED</span></div>
+        <div class="brand-stat"><strong>GIMHAE</strong><span data-i18n="stat2">LOCAL PORK</span></div>
+        <div class="brand-stat"><strong>SMOKED</strong><span data-i18n="stat3">IN-HOUSE</span></div>
+        <div class="brand-stat"><strong>BUSAN</strong><span data-i18n="stat4">LOCAL FLAVOR</span></div>
       </div>
 
-      <section>
-        <div class="section-head">
-          <span class="eyebrow" data-i18n="whyEyebrow">WHY 336:60</span>
-          <h2 data-i18n="whyTitle">A premium one-page landing experience for travelers looking for a true Haeundae bite.</h2>
-          <p data-i18n="whyDesc">Designed for Google Business Profile traffic, this page helps visitors understand what makes 336:60 different at a glance.</p>
-        </div>
-        <div class="grid-2">
-          <article class="feature-card"><strong data-i18n="card1Title">336-hour dry aging</strong><p data-i18n="card1Body">The star ingredient is same-day butchered local pork from Gimhae, dry-aged in-store for 336 hours to deepen umami and texture.</p></article>
-          <article class="feature-card"><strong data-i18n="card2Title">Butchered & smoked in-house</strong><p data-i18n="card2Body">After aging, the pork is butchered and smoked in-store, giving each bite a distinct smoky K-BBQ character.</p></article>
-          <article class="feature-card"><strong data-i18n="card3Title">Busan local sauces</strong><p data-i18n="card3Body">Cheese sauce and spicy sauce are built with anchovy fish sauce from Gijang Daebyeon Port for a Busan-forward flavor twist.</p></article>
-          <article class="feature-card"><strong data-i18n="card4Title">Fresh soy milk every day</strong><p data-i18n="card4Body">The signature drink, Ttoujang, is made daily by grinding soybeans in-house for a fresh and clean finish.</p></article>
+      <section class="content">
+        <div class="manifesto">
+          <span class="eyebrow" data-i18n="manifestoKicker">THE IDEA BEHIND 336:60</span>
+          <h2 data-i18n="manifestoTitle">Time makes the flavor.<br>Haeundae makes the moment.</h2>
+          <p data-i18n="manifestoBody">We take the slow road where it matters — aging, butchering, smoking and making our sauces. Then we serve it in a fast, easy street-food format made for the energy of Haeundae.</p>
         </div>
       </section>
 
-      <section id="menu">
+      <section class="content">
         <div class="section-head">
-          <span class="eyebrow" data-i18n="menuEyebrow">SIGNATURE MENU</span>
-          <h2 data-i18n="menuTitle">Built to become a Haeundae street-food icon</h2>
+          <span class="eyebrow" data-i18n="processKicker">FROM LOCAL PORK TO STREET FOOD</span>
+          <h2 data-i18n="processTitle">The 336:60 way</h2>
+          <p data-i18n="processIntro">Four things define the flavor before the first bite.</p>
         </div>
-        <div class="gallery">
+        <div class="process-grid">
+          <article class="process-card">
+            <span class="process-num">01</span>
+            <strong data-i18n="p1Title">Gimhae local pork</strong>
+            <p data-i18n="p1Body">Fresh local pork from Gimhae is the starting point of our signature menu.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-num">02</span>
+            <strong data-i18n="p2Title">336-hour dry aging</strong>
+            <p data-i18n="p2Body">We dry-age the pork in-house for 336 hours to build deeper savory flavor.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-num">03</span>
+            <strong data-i18n="p3Title">Butchered & smoked here</strong>
+            <p data-i18n="p3Body">After aging, the pork is butchered and smoked at the shop for a bold K-BBQ aroma.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-num">04</span>
+            <strong data-i18n="p4Title">Busan in the sauce</strong>
+            <p data-i18n="p4Body">Anchovy fish sauce from Gijang Daebyeon Port is reworked into our cheese and spicy sauces.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content" id="menu">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="menuKicker">SIGNATURES</span>
+          <h2 data-i18n="menuTitle">One hand. Big flavor.</h2>
+          <p data-i18n="menuIntro">Our Wang Gogi Jeonbyeong reimagines a familiar Korean favorite with dry-aged smoked pork and a Busan point of view.</p>
+        </div>
+        <div class="menu-stack">
           <article class="menu-card">
-            <img src="images/33660-wrap-cheese.webp" alt="336:60 Wang Gogi Jeonbyeong with cheese sauce">
-            <div class="menu-body">
-              <span class="tag">336:60 Signature</span>
-              <strong data-i18n="menu1Title">Wang Gogi Jeonbyeong · Cheese Sauce</strong>
-              <p data-i18n="menu1Body">Smoky dry-aged pork, crisp vegetables and rich cheese sauce in a hand-held wrap-style jeonbyeong.</p>
+            <img src="images/33660-wrap-cheese.webp" alt="336:60 Wang Gogi Jeonbyeong cheese sauce" loading="lazy">
+            <div class="menu-info">
+              <span class="menu-kicker">336:60 SIGNATURE</span>
+              <h3 data-i18n="menu1Title">Wang Gogi Jeonbyeong · Cheese</h3>
+              <p data-i18n="menu1Body">Smoked dry-aged pork, fresh vegetables and creamy cheese sauce in a generous hand-held wrap.</p>
             </div>
           </article>
+
           <article class="menu-card">
-            <img src="images/33660-wrap-spicy.webp" alt="336:60 Wang Gogi Jeonbyeong with spicy sauce">
-            <div class="menu-body">
-              <span class="tag">336:60 Signature</span>
-              <strong data-i18n="menu2Title">Wang Gogi Jeonbyeong · Spicy Sauce</strong>
-              <p data-i18n="menu2Body">The same signature pork with a bold spicy sauce for guests who want more heat and deeper K-BBQ punch.</p>
+            <img src="images/33660-wrap-spicy.webp" alt="336:60 Wang Gogi Jeonbyeong spicy sauce" loading="lazy">
+            <div class="menu-info">
+              <span class="menu-kicker">336:60 SIGNATURE</span>
+              <h3 data-i18n="menu2Title">Wang Gogi Jeonbyeong · Spicy</h3>
+              <p data-i18n="menu2Body">The same smoky pork with a bolder spicy sauce for a stronger K-BBQ finish.</p>
             </div>
           </article>
-          <article class="menu-card">
-            <img src="images/33660-soymilk.webp" alt="336:60 house-made soy milk Ttoujang pouch packaging">
-            <div class="menu-body">
-              <span class="tag">Daily Fresh Drink</span>
-              <strong data-i18n="menu3Title">House-made Soy Milk · Ttoujang</strong>
-              <p data-i18n="menu3Body">Made fresh every day by grinding whole soybeans and removing the okara for a smoother, cleaner taste.</p>
+
+          <article class="menu-card portrait">
+            <img src="images/33660-soymilk.webp" alt="336:60 fresh house-made soy milk Ttoujang" loading="lazy">
+            <div class="menu-info">
+              <span class="menu-kicker" data-i18n="drinkTag">DAILY FRESH</span>
+              <h3 data-i18n="drinkTitle">House-made Soy Milk · Ttoujang</h3>
+              <p data-i18n="drinkBody">Soybeans are ground every day and the okara is removed for a clean, fresh and smooth finish.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section>
+      <section class="content">
         <div class="section-head">
-          <span class="eyebrow" data-i18n="galleryEyebrow">SPACE & PROCESS</span>
-          <h2 data-i18n="galleryTitle">See the brand, the space and the aging process</h2>
+          <span class="eyebrow" data-i18n="spaceKicker">THE SPACE</span>
+          <h2 data-i18n="spaceTitle">Orange heat. Navy cool.</h2>
+          <p data-i18n="spaceIntro">A compact Haeundae street-food shop built around the same Slow / Fast contrast as the brand.</p>
         </div>
-        <div class="gallery">
-          <article class="gallery-card">
-            <img src="images/33660-interior.webp" alt="336:60 interior at Haeundae Gunam-ro">
-            <div class="gallery-copy"><strong data-i18n="g1Title">Store Interior</strong><p data-i18n="g1Body">Warm orange, navy and clean lines create a fast yet premium street-food atmosphere.</p></div>
-          </article>
-          <article class="gallery-card">
-            <img src="images/33660-sign.webp" alt="336:60 storefront sign showing Slow and Fast concept">
-            <div class="gallery-copy"><strong data-i18n="g2Title">336:60 Signage</strong><p data-i18n="g2Body">The slow-to-fast concept is clearly anchored in the storefront identity.</p></div>
-          </article>
-          <article class="gallery-card">
-            <img src="images/33660-dryaging.webp" alt="Close-up of dry-aging pork process at 336:60">
-            <div class="gallery-copy"><strong data-i18n="g3Title">336-hour Dry Aging</strong><p data-i18n="g3Body">Dry-aged local pork is one of the strongest brand differentiators at 336:60.</p></div>
-          </article>
-          <article class="gallery-card">
-            <img src="images/33660-dryaging-window.webp" alt="336:60 window with brand message over the aging display">
-            <div class="gallery-copy"><strong data-i18n="g4Title">Brand Window Message</strong><p data-i18n="g4Body">A bold visual promise: wait 60 seconds for the thrill after 336 hours of preparation.</p></div>
-          </article>
+        <div class="wide-photo">
+          <img src="images/33660-interior.webp" alt="Interior of 336:60 in Haeundae" loading="lazy">
+        </div>
+        <div class="photo-copy">
+          <strong data-i18n="spaceCaption">336:60 · Haeundae Gunam-ro</strong>
+          <p data-i18n="spaceCaptionBody">Easy to stop by between the beach, shopping, movies and a night out in Haeundae.</p>
         </div>
       </section>
 
-      <section id="story">
-        <div class="section-head">
-          <span class="eyebrow" data-i18n="storyEyebrow">BRAND STORY</span>
-          <h2 data-i18n="storyTitle">A Haeundae original made with Busan local ingredients</h2>
+      <section class="content">
+        <div class="wide-photo">
+          <img src="images/33660-sign.webp" alt="336:60 storefront sign Slow Fast" loading="lazy">
         </div>
-        <div class="story-box">
-          <p data-i18n="storyP1">336:60 is located on the 1st floor of the CGV building on Haeundae Gunam-ro. The brand is built around a simple contrast: “Slow” for the 336 hours of dry aging, and “Fast” for the satisfying speed of street-food service.</p>
-          <p data-i18n="storyP2">Its representative ingredient is same-day butchered Gimhae local pork, dry-aged in-store for 336 hours to intensify flavor. The pork is then butchered and smoked in-house to create a smoky K-BBQ expression with richer aroma and texture.</p>
-          <p data-i18n="storyP3">The sauces also reflect regional identity. Using anchovy fish sauce from Gijang Daebyeon Port, 336:60 crafts its own cheese sauce and spicy sauce. The brand also reinterprets a Gangwon-style meat jeonbyeong through a Busan lens and serves fresh house-made soy milk, called Ttoujang, every day.</p>
+        <div class="photo-copy">
+          <strong>336:60 · Slow / Fast</strong>
+          <p data-i18n="signBody">336 hours for the craft. 60 seconds for the anticipation. That contrast is our name and our identity.</p>
         </div>
       </section>
 
-      <section id="visit">
+      <section class="content">
         <div class="section-head">
-          <span class="eyebrow" data-i18n="visitEyebrow">VISIT 336:60</span>
-          <h2 data-i18n="visitTitle">In the heart of Haeundae Gunam-ro</h2>
-          <p data-i18n="visitDesc">336:60 is on the 1st floor of the CGV building in Haeundae Gunam-ro, making it easy to stop by during a beach walk, movie visit or evening food crawl.</p>
+          <span class="eyebrow" data-i18n="agingKicker">336 HOURS</span>
+          <h2 data-i18n="agingTitle">The wait is part of the flavor.</h2>
         </div>
-        <div class="location-box">
-          <div class="address-wrap">
-            <div class="address-item">
-              <span class="address-label" data-i18n="addressLabel">Address</span>
-              <div class="address-value" data-i18n="addressText">1F, CGV Building, Gunam-ro, Haeundae-gu, Busan, South Korea</div>
-            </div>
-            <div class="action-grid">
-              <a href="https://www.google.com/maps/search/?api=1&query=336%3A60%20Haeundae%20Gunam-ro%20CGV%20Building" target="_blank" rel="noopener" style="background:var(--orange);color:#fff" data-i18n="ctaGoogle">Open Google Maps</a>
-              <a href="https://m.place.naver.com/restaurant/2029664983" target="_blank" rel="noopener" style="background:#f5eee6;color:var(--navy)" data-i18n="ctaNaver">Open Naver Place</a>
-            </div>
-            <div class="address-item">
-              <span class="address-label" data-i18n="mapLabel">Google Map Embed</span>
+        <div class="menu-stack">
+          <div class="wide-photo">
+            <img src="images/33660-dryaging.webp" alt="Pork dry-aging process at 336:60" loading="lazy">
+          </div>
+          <div class="wide-photo">
+            <img src="images/33660-dryaging-window.webp" alt="336:60 dry-aging display and brand message" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="storyKicker">OUR STORY</span>
+          <h2 data-i18n="storyTitle">Local ingredients. A Haeundae attitude.</h2>
+        </div>
+        <div class="brand-story">
+          <div class="story-line">
+            <strong data-i18n="storyLabel1">LOCAL PORK</strong>
+            <p data-i18n="storyText1">Our main ingredient is Gimhae local pork, prepared with an in-house 336-hour dry-aging process to concentrate savory flavor before it ever reaches the grill.</p>
+          </div>
+          <div class="story-line">
+            <strong data-i18n="storyLabel2">BUSAN FLAVOR</strong>
+            <p data-i18n="storyText2">We use anchovy fish sauce from Gijang Daebyeon Port in our signature sauces, bringing a distinctly local layer to cheese and spicy flavors.</p>
+          </div>
+          <div class="story-line">
+            <strong data-i18n="storyLabel3">STREET FOOD</strong>
+            <p data-i18n="storyText3">Inspired by Korean meat jeonbyeong, we rework the format into something generous, smoky and easy to enjoy while exploring Haeundae.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content" id="visit">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="visitKicker">VISIT 336:60</span>
+          <h2 data-i18n="visitTitle">Right in Haeundae.</h2>
+          <p data-i18n="visitIntro">Find us on the 1st floor of the CGV building on Haeundae Gunam-ro.</p>
+        </div>
+        <div class="visit-card">
+          <div class="visit-copy">
+            <span class="address-label" data-i18n="addressLabel">LOCATION</span>
+            <div class="address" data-i18n="addressText">1F, CGV Building, Gunam-ro, Haeundae-gu, Busan, South Korea</div>
+            <p class="visit-note" data-i18n="visitNote">A convenient stop during a Haeundae beach walk, movie visit or evening food crawl.</p>
+            <div class="visit-actions">
+              <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=336%3A60%20Haeundae%20Gunam-ro%20CGV%20Building" target="_blank" rel="noopener" data-i18n="googleBtn">Google Maps</a>
+              <a class="btn light" href="https://m.place.naver.com/restaurant/2029664983" target="_blank" rel="noopener" data-i18n="naverBtn">Naver Place</a>
             </div>
           </div>
-          <div class="map-wrap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x35688d0049448983%3A0xd5535285b4d77ce3!2z7IK87IK87Jyh7Jyh6rO1!5e0!3m2!1sko!2skr!4v1787994006864!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x35688d0049448983%3A0xd5535285b4d77ce3!2z7IK87IK87Jyh7Jyh6rO1!5e0!3m2!1sko!2skr!4v1787994006864!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="336:60 Google Map"></iframe>
           </div>
         </div>
       </section>
 
-      <section>
-        <div class="section-head">
-          <span class="eyebrow" data-i18n="faqEyebrow">FAQ</span>
-          <h2 data-i18n="faqTitle">Quick answers for first-time visitors</h2>
-        </div>
-        <div class="faq-list">
-          <article class="faq-item"><strong data-i18n="faq1q">What is 336:60 known for?</strong><p data-i18n="faq1a">336:60 is best known for Wang Gogi Jeonbyeong made with 336-hour dry-aged local pork and in-house smoked K-BBQ flavor.</p></article>
-          <article class="faq-item"><strong data-i18n="faq2q">What makes the food different?</strong><p data-i18n="faq2a">The concept combines Gimhae local pork, a 336-hour dry-aging process, in-house smoking, Busan-inspired sauces, and daily fresh soy milk.</p></article>
-          <article class="faq-item"><strong data-i18n="faq3q">Where is 336:60 located?</strong><p data-i18n="faq3a">It is located on the 1st floor of the CGV building on Haeundae Gunam-ro in Busan.</p></article>
-        </div>
-      </section>
-
-      <section>
-        <div class="final-box">
-          <h2 data-i18n="finalTitle">Taste the slow craft of 336 hours — and the fast excitement of 60 seconds.</h2>
-          <p data-i18n="finalDesc">If you are exploring Haeundae and looking for a Busan-style K-BBQ street-food experience, 336:60 is made for your route.</p>
+      <section class="content">
+        <div class="final-cta">
+          <h2 data-i18n="finalTitle">336 hours slow.<br>Haeundae, served fast.</h2>
+          <p data-i18n="finalBody">Come for the smoky pork. Stay for the Busan flavor. Take one more bite for the road.</p>
           <div class="final-actions">
-            <a href="https://www.google.com/maps/search/?api=1&query=336%3A60%20Haeundae%20Gunam-ro%20CGV%20Building" target="_blank" rel="noopener" data-i18n="finalBtn1">Open Google Maps</a>
-            <a href="https://m.place.naver.com/restaurant/2029664983" target="_blank" rel="noopener" data-i18n="finalBtn2">Open Naver Place</a>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=336%3A60%20Haeundae%20Gunam-ro%20CGV%20Building" target="_blank" rel="noopener" data-i18n="finalGoogle">Get directions</a>
+            <a class="btn" href="https://m.place.naver.com/restaurant/2029664983" target="_blank" rel="noopener" data-i18n="finalNaver">View Naver Place</a>
           </div>
         </div>
       </section>
@@ -388,130 +859,94 @@
 
   <script>
     const COPY = {
-      en: {
-        navStory:'Story', navMenu:'Signature', navVisit:'Visit',
-        heroTag:'HAEUNDAE · BUSAN LOCAL STREET FOOD',
-        heroTitle:'336 hours of patience.<br>60 seconds of thrill.',
-        heroDesc:'At 336:60, same-day butchered Gimhae local pork is dry-aged for 336 hours, butchered in-house, smoked into a bold K-BBQ style, and wrapped as a signature Wang Gogi Jeonbyeong in the heart of Haeundae.',
-        ctaGoogle:'Open Google Maps', ctaNaver:'Open Naver Place',
-        chip1:'336h Dry Aging', chip2:'Gimhae Local Pork', chip3:'Smoked K-BBQ', chip4:'Daily Soy Milk',
-        whyEyebrow:'WHY 336:60', whyTitle:'A premium one-page landing experience for travelers looking for a true Haeundae bite.', whyDesc:'Designed for Google Business Profile traffic, this page helps visitors understand what makes 336:60 different at a glance.',
-        card1Title:'336-hour dry aging', card1Body:'The star ingredient is same-day butchered local pork from Gimhae, dry-aged in-store for 336 hours to deepen umami and texture.',
-        card2Title:'Butchered & smoked in-house', card2Body:'After aging, the pork is butchered and smoked in-store, giving each bite a distinct smoky K-BBQ character.',
-        card3Title:'Busan local sauces', card3Body:'Cheese sauce and spicy sauce are built with anchovy fish sauce from Gijang Daebyeon Port for a Busan-forward flavor twist.',
-        card4Title:'Fresh soy milk every day', card4Body:'The signature drink, Ttoujang, is made daily by grinding soybeans in-house for a fresh and clean finish.',
-        menuEyebrow:'SIGNATURE MENU', menuTitle:'Built to become a Haeundae street-food icon',
-        menu1Title:'Wang Gogi Jeonbyeong · Cheese Sauce', menu1Body:'Smoky dry-aged pork, crisp vegetables and rich cheese sauce in a hand-held wrap-style jeonbyeong.',
-        menu2Title:'Wang Gogi Jeonbyeong · Spicy Sauce', menu2Body:'The same signature pork with a bold spicy sauce for guests who want more heat and deeper K-BBQ punch.',
-        menu3Title:'House-made Soy Milk · Ttoujang', menu3Body:'Made fresh every day by grinding whole soybeans and removing the okara for a smoother, cleaner taste.',
-        galleryEyebrow:'SPACE & PROCESS', galleryTitle:'See the brand, the space and the aging process',
-        g1Title:'Store Interior', g1Body:'Warm orange, navy and clean lines create a fast yet premium street-food atmosphere.',
-        g2Title:'336:60 Signage', g2Body:'The slow-to-fast concept is clearly anchored in the storefront identity.',
-        g3Title:'336-hour Dry Aging', g3Body:'Dry-aged local pork is one of the strongest brand differentiators at 336:60.',
-        g4Title:'Brand Window Message', g4Body:'A bold visual promise: wait 60 seconds for the thrill after 336 hours of preparation.',
-        storyEyebrow:'BRAND STORY', storyTitle:'A Haeundae original made with Busan local ingredients',
-        storyP1:'336:60 is located on the 1st floor of the CGV building on Haeundae Gunam-ro. The brand is built around a simple contrast: “Slow” for the 336 hours of dry aging, and “Fast” for the satisfying speed of street-food service.',
-        storyP2:'Its representative ingredient is same-day butchered Gimhae local pork, dry-aged in-store for 336 hours to intensify flavor. The pork is then butchered and smoked in-house to create a smoky K-BBQ expression with richer aroma and texture.',
-        storyP3:'The sauces also reflect regional identity. Using anchovy fish sauce from Gijang Daebyeon Port, 336:60 crafts its own cheese sauce and spicy sauce. The brand also reinterprets a Gangwon-style meat jeonbyeong through a Busan lens and serves fresh house-made soy milk, called Ttoujang, every day.',
-        visitEyebrow:'VISIT 336:60', visitTitle:'In the heart of Haeundae Gunam-ro', visitDesc:'336:60 is on the 1st floor of the CGV building in Haeundae Gunam-ro, making it easy to stop by during a beach walk, movie visit or evening food crawl.',
-        addressLabel:'Address', addressText:'1F, CGV Building, Gunam-ro, Haeundae-gu, Busan, South Korea', mapLabel:'Google Map Embed',
-        faqEyebrow:'FAQ', faqTitle:'Quick answers for first-time visitors',
-        faq1q:'What is 336:60 known for?', faq1a:'336:60 is best known for Wang Gogi Jeonbyeong made with 336-hour dry-aged local pork and in-house smoked K-BBQ flavor.',
-        faq2q:'What makes the food different?', faq2a:'The concept combines Gimhae local pork, a 336-hour dry-aging process, in-house smoking, Busan-inspired sauces, and daily fresh soy milk.',
-        faq3q:'Where is 336:60 located?', faq3a:'It is located on the 1st floor of the CGV building on Haeundae Gunam-ro in Busan.',
-        finalTitle:'Taste the slow craft of 336 hours — and the fast excitement of 60 seconds.', finalDesc:'If you are exploring Haeundae and looking for a Busan-style K-BBQ street-food experience, 336:60 is made for your route.',
-        finalBtn1:'Open Google Maps', finalBtn2:'Open Naver Place',
-        footer:'© 336:60 · Haeundae, Busan · English / 日本語 / 繁體中文'
+      en:{
+        heroTag:'HAEUNDAE · BUSAN LOCAL K-BBQ',
+        heroTitle:'Slow for <em>336 hours.</em><br>Worth it in 60 seconds.',
+        heroDesc:'Gimhae local pork is dry-aged in-house for 336 hours, butchered and smoked at the shop, then wrapped into our signature Wang Gogi Jeonbyeong. A Busan-born bite made for Haeundae.',
+        heroVisit:'Find us in Haeundae',heroMenu:'See signature menu',
+        stat1:'DRY AGED',stat2:'LOCAL PORK',stat3:'IN-HOUSE',stat4:'LOCAL FLAVOR',
+        manifestoKicker:'THE IDEA BEHIND 336:60',manifestoTitle:'Time makes the flavor.<br>Haeundae makes the moment.',manifestoBody:'We take the slow road where it matters — aging, butchering, smoking and making our sauces. Then we serve it in a fast, easy street-food format made for the energy of Haeundae.',
+        processKicker:'FROM LOCAL PORK TO STREET FOOD',processTitle:'The 336:60 way',processIntro:'Four things define the flavor before the first bite.',
+        p1Title:'Gimhae local pork',p1Body:'Fresh local pork from Gimhae is the starting point of our signature menu.',
+        p2Title:'336-hour dry aging',p2Body:'We dry-age the pork in-house for 336 hours to build deeper savory flavor.',
+        p3Title:'Butchered & smoked here',p3Body:'After aging, the pork is butchered and smoked at the shop for a bold K-BBQ aroma.',
+        p4Title:'Busan in the sauce',p4Body:'Anchovy fish sauce from Gijang Daebyeon Port is reworked into our cheese and spicy sauces.',
+        menuKicker:'SIGNATURES',menuTitle:'One hand. Big flavor.',menuIntro:'Our Wang Gogi Jeonbyeong reimagines a familiar Korean favorite with dry-aged smoked pork and a Busan point of view.',
+        menu1Title:'Wang Gogi Jeonbyeong · Cheese',menu1Body:'Smoked dry-aged pork, fresh vegetables and creamy cheese sauce in a generous hand-held wrap.',
+        menu2Title:'Wang Gogi Jeonbyeong · Spicy',menu2Body:'The same smoky pork with a bolder spicy sauce for a stronger K-BBQ finish.',
+        drinkTag:'DAILY FRESH',drinkTitle:'House-made Soy Milk · Ttoujang',drinkBody:'Soybeans are ground every day and the okara is removed for a clean, fresh and smooth finish.',
+        spaceKicker:'THE SPACE',spaceTitle:'Orange heat. Navy cool.',spaceIntro:'A compact Haeundae street-food shop built around the same Slow / Fast contrast as the brand.',spaceCaption:'336:60 · Haeundae Gunam-ro',spaceCaptionBody:'Easy to stop by between the beach, shopping, movies and a night out in Haeundae.',
+        signBody:'336 hours for the craft. 60 seconds for the anticipation. That contrast is our name and our identity.',
+        agingKicker:'336 HOURS',agingTitle:'The wait is part of the flavor.',
+        storyKicker:'OUR STORY',storyTitle:'Local ingredients. A Haeundae attitude.',storyLabel1:'LOCAL PORK',storyText1:'Our main ingredient is Gimhae local pork, prepared with an in-house 336-hour dry-aging process to concentrate savory flavor before it ever reaches the grill.',storyLabel2:'BUSAN FLAVOR',storyText2:'We use anchovy fish sauce from Gijang Daebyeon Port in our signature sauces, bringing a distinctly local layer to cheese and spicy flavors.',storyLabel3:'STREET FOOD',storyText3:'Inspired by Korean meat jeonbyeong, we rework the format into something generous, smoky and easy to enjoy while exploring Haeundae.',
+        visitKicker:'VISIT 336:60',visitTitle:'Right in Haeundae.',visitIntro:'Find us on the 1st floor of the CGV building on Haeundae Gunam-ro.',addressLabel:'LOCATION',addressText:'1F, CGV Building, Gunam-ro, Haeundae-gu, Busan, South Korea',visitNote:'A convenient stop during a Haeundae beach walk, movie visit or evening food crawl.',googleBtn:'Google Maps',naverBtn:'Naver Place',
+        finalTitle:'336 hours slow.<br>Haeundae, served fast.',finalBody:'Come for the smoky pork. Stay for the Busan flavor. Take one more bite for the road.',finalGoogle:'Get directions',finalNaver:'View Naver Place',footer:'© 336:60 · Haeundae, Busan · English / 日本語 / 繁體中文'
       },
-      jp: {
-        navStory:'ストーリー', navMenu:'シグネチャー', navVisit:'アクセス',
-        heroTag:'海雲台 · 釜山ローカルストリートフード',
-        heroTitle:'336時間のこだわり。<br>60秒の高揚感。',
-        heroDesc:'336:60では、当日精肉した金海産ローカル豚肉を店内で336時間ドライエイジングし、発骨・燻製まで行って、海雲台の中心で味わえる王肉ジョンビョンとして提供しています。',
-        ctaGoogle:'Googleマップを開く', ctaNaver:'Naver Placeを開く',
-        chip1:'336時間熟成', chip2:'金海ローカル豚', chip3:'燻製K-BBQ', chip4:'自家製豆乳',
-        whyEyebrow:'336:60の魅力', whyTitle:'海雲台で“本当にここらしい一口”を探す旅行者のためのランディングページ', whyDesc:'Google Business Profileから訪れるユーザーに向けて、336:60ならではの違いがひと目で伝わる構成です。',
-        card1Title:'336時間ドライエイジング', card1Body:'当日精肉した金海産ローカル豚肉を店内で336時間熟成し、旨味と食感をより深く引き出します。',
-        card2Title:'店内発骨・店内燻製', card2Body:'熟成後の豚肉は店内で発骨し、そのまま燻製することで、濃厚なK-BBQらしい香りを完成させます。',
-        card3Title:'釜山ローカルソース', card3Body:'機張・大辺港のいわし魚醤を活かし、チーズソースと辛口ソースを自家製で仕上げています。',
-        card4Title:'毎日作る自家製豆乳', card4Body:'代表ドリンク「トウジャン」は、毎日豆を挽いておからを取り除き、すっきりした味わいに仕上げます。',
-        menuEyebrow:'シグネチャーメニュー', menuTitle:'海雲台を代表するストリートフードを目指して',
-        menu1Title:'王肉ジョンビョン · チーズソース', menu1Body:'燻製熟成豚、シャキッとした野菜、濃厚なチーズソースを包んだ、片手で楽しめるスタイル。',
-        menu2Title:'王肉ジョンビョン · 辛口ソース', menu2Body:'同じシグネチャー豚肉に、より力強い辛口ソースを合わせた、K-BBQ感のある一品です。',
-        menu3Title:'自家製豆乳 · トウジャン', menu3Body:'毎日大豆を挽き、おからを取り除いて作る、なめらかで後味の良い自家製豆乳です。',
-        galleryEyebrow:'空間と工程', galleryTitle:'ブランド、空間、熟成工程を見る',
-        g1Title:'店内空間', g1Body:'オレンジとネイビーを基調に、スピーディーでありながら上質感のある空間を演出しています。',
-        g2Title:'336:60 サイン', g2Body:'「Slow」と「Fast」のブランドコンセプトが外観にもはっきり表れています。',
-        g3Title:'336時間熟成', g3Body:'ローカル豚肉の熟成工程は、336:60の大きな差別化ポイントです。',
-        g4Title:'ウィンドウメッセージ', g4Body:'336時間の準備のあと、60秒のときめきを届けるという約束を視覚的に表現しています。',
-        storyEyebrow:'ブランドストーリー', storyTitle:'釜山ローカル食材で作る、海雲台オリジナル',
-        storyP1:'336:60は、海雲台クナムロCGVビル1階に位置するストリートフードブランドです。ブランドの核心は、「336時間のゆっくり」と「60秒の速さ」という対比にあります。',
-        storyP2:'代表食材は、当日精肉した金海産のローカル豚肉。店内で336時間ドライエイジングしたあと、発骨・燻製まで行い、スモーキーで香り高いK-BBQスタイルへと仕上げています。',
-        storyP3:'ソースにも地域性があります。機張・大辺港のいわし魚醤を活かしたチーズソースと辛口ソース、さらに江原道の肉ジョンビョンを釜山らしく再解釈。毎日手作りする豆乳「トウジャン」も、336:60らしさを伝えるシグネチャーのひとつです。',
-        visitEyebrow:'アクセス', visitTitle:'海雲台クナムロの中心で', visitDesc:'海雲台クナムロのCGVビル1階にあり、ビーチ散策や映画の前後、夜の食べ歩きの途中にも立ち寄りやすい場所です。',
-        addressLabel:'住所', addressText:'韓国 釜山広域市 海雲台区 クナムロ CGVビル 1階', mapLabel:'Googleマップ埋め込み',
-        faqEyebrow:'FAQ', faqTitle:'初めての方向けQ&A',
-        faq1q:'336:60の代表メニューは何ですか？', faq1a:'336時間熟成のローカル豚肉を使った王肉ジョンビョンが代表メニューです。',
-        faq2q:'何が特別ですか？', faq2a:'金海ローカル豚、336時間熟成、店内燻製、釜山ローカルソース、毎日作る豆乳を組み合わせている点です。',
-        faq3q:'どこにありますか？', faq3a:'釜山・海雲台クナムロのCGVビル1階にあります。',
-        finalTitle:'336時間の手間と、60秒の感動を味わってください。', finalDesc:'海雲台で釜山らしいK-BBQストリートフードを探しているなら、336:60がぴったりです。',
-        finalBtn1:'Googleマップを開く', finalBtn2:'Naver Placeを開く',
-        footer:'© 336:60 · 海雲台, 釜山 · English / 日本語 / 繁體中文'
+      jp:{
+        heroTag:'海雲台 · 釜山ローカル K-BBQ',
+        heroTitle:'ゆっくり<em>336時間。</em><br>感動は60秒で。',
+        heroDesc:'金海産ローカル豚を店内で336時間ドライエイジング。発骨・燻製まで店内で行い、シグネチャーの王肉ジョンビョンに仕上げます。海雲台で楽しむ、釜山発の一口です。',
+        heroVisit:'海雲台の店舗を見る',heroMenu:'シグネチャーを見る',
+        stat1:'ドライエイジング',stat2:'ローカル豚',stat3:'店内燻製',stat4:'釜山の味',
+        manifestoKicker:'336:60という名前',manifestoTitle:'時間が味をつくる。<br>海雲台が瞬間をつくる。',manifestoBody:'熟成、発骨、燻製、ソース作り。大切な工程には時間をかけます。完成した味は、海雲台のテンポに合う気軽なストリートフードとしてスピーディーに。',
+        processKicker:'ローカル豚からストリートフードへ',processTitle:'336:60のつくり方',processIntro:'最初の一口までに、4つのこだわりがあります。',
+        p1Title:'金海ローカル豚',p1Body:'シグネチャーメニューの始まりは、金海産の新鮮なローカル豚肉です。',
+        p2Title:'336時間ドライエイジング',p2Body:'店内で336時間じっくり熟成し、豚肉の旨味をより深く引き出します。',
+        p3Title:'店内発骨・店内燻製',p3Body:'熟成後は店内で発骨し、そのまま燻製。香り高いK-BBQスタイルへ仕上げます。',
+        p4Title:'ソースにも釜山を',p4Body:'機張・大辺港のいわし魚醤を、チーズソースと辛口ソースに再解釈しています。',
+        menuKicker:'シグネチャー',menuTitle:'片手で楽しむ、大きな満足。',menuIntro:'韓国の肉ジョンビョンを、熟成燻製豚と釜山らしい味で新しく仕上げました。',
+        menu1Title:'王肉ジョンビョン · チーズ',menu1Body:'燻製熟成豚、フレッシュな野菜、まろやかなチーズソースをたっぷり包みました。',
+        menu2Title:'王肉ジョンビョン · スパイシー',menu2Body:'スモーキーな豚肉に力強い辛口ソースを合わせた、K-BBQ感のある一品です。',
+        drinkTag:'毎日手作り',drinkTitle:'自家製豆乳 · トウジャン',drinkBody:'毎日豆を挽き、おからを取り除いて、すっきりなめらかな味わいに仕上げます。',
+        spaceKicker:'店内',spaceTitle:'オレンジの熱気。ネイビーのクールさ。',spaceIntro:'Slow / Fastというブランドのコントラストを、そのまま空間にも表現しています。',spaceCaption:'336:60 · 海雲台クナムロ',spaceCaptionBody:'ビーチ、ショッピング、映画、夜の食べ歩きの途中にも立ち寄りやすい場所です。',
+        signBody:'336時間の手間と、60秒の期待。そのコントラストが336:60という名前とアイデンティティです。',
+        agingKicker:'336時間',agingTitle:'待つ時間も、味の一部。',
+        storyKicker:'ブランドストーリー',storyTitle:'ローカル食材。海雲台らしいテンポ。',storyLabel1:'ローカル豚',storyText1:'金海産のローカル豚肉を店内で336時間ドライエイジングし、焼く前から旨味をじっくり積み重ねます。',storyLabel2:'釜山の味',storyText2:'機張・大辺港のいわし魚醤をシグネチャーソースに活かし、チーズと辛口の味に釜山らしい一層を加えています。',storyLabel3:'ストリートフード',storyText3:'韓国の肉ジョンビョンを、ボリューム感、燻製香、食べ歩きやすさを備えた海雲台スタイルへ再解釈しました。',
+        visitKicker:'アクセス',visitTitle:'海雲台の中心で。',visitIntro:'海雲台クナムロ、CGVビル1階にあります。',addressLabel:'LOCATION',addressText:'韓国 釜山広域市 海雲台区 クナムロ CGVビル 1階',visitNote:'海雲台ビーチ散策、映画の前後、夜の食べ歩きにも立ち寄りやすい場所です。',googleBtn:'Googleマップ',naverBtn:'Naver Place',
+        finalTitle:'336時間ゆっくり。<br>海雲台では、軽やかに。',finalBody:'燻製豚を味わい、釜山の風味を楽しんで、もう一口だけ旅のお供に。',finalGoogle:'道順を見る',finalNaver:'Naver Placeを見る',footer:'© 336:60 · 海雲台, 釜山 · English / 日本語 / 繁體中文'
       },
-      tw: {
-        navStory:'品牌故事', navMenu:'招牌餐點', navVisit:'前往店家',
-        heroTag:'海雲臺 · 釜山在地街頭美食',
-        heroTitle:'336小時的講究。<br>60秒的驚喜。',
-        heroDesc:'336:60 選用當日分切的金海在地豬肉，在店內乾式熟成 336 小時，再經店內分切與煙燻，最後做成位於海雲臺核心地段的招牌王肉煎餅。',
-        ctaGoogle:'開啟 Google 地圖', ctaNaver:'開啟 Naver Place',
-        chip1:'336小時熟成', chip2:'金海在地豬', chip3:'煙燻 K-BBQ', chip4:'每日豆漿',
-        whyEyebrow:'336:60 特色', whyTitle:'為尋找真正海雲臺風味旅客打造的高級感單頁頁面', whyDesc:'這個頁面以 Google Business Profile 流量為核心，讓初次訪客快速理解 336:60 的獨特之處。',
-        card1Title:'336小時乾式熟成', card1Body:'主角食材是金海在地豬肉，當日分切後在店內乾式熟成 336 小時，讓鮮味與口感更集中。',
-        card2Title:'店內分切與煙燻', card2Body:'熟成後的豬肉會在店內分切並煙燻，呈現更鮮明的 K-BBQ 煙燻香氣。',
-        card3Title:'釜山在地醬料', card3Body:'使用機張大邊港的鯷魚魚露，調製成招牌起司醬與辣味醬，展現釜山在地風味。',
-        card4Title:'每日現做豆漿', card4Body:'招牌飲品「또우장」每天現磨黃豆並去除豆渣，口感乾淨清爽。',
-        menuEyebrow:'招牌餐點', menuTitle:'目標成為海雲臺代表性街頭美食',
-        menu1Title:'王肉煎餅 · 起司醬', menu1Body:'把煙燻熟成豬肉、爽脆蔬菜與濃郁起司醬包進可手持享用的煎餅中。',
-        menu2Title:'王肉煎餅 · 辣味醬', menu2Body:'同樣的招牌豬肉搭配更濃厚的辣味醬，適合喜歡重口味與 K-BBQ 風格的旅客。',
-        menu3Title:'自製豆漿 · 또우장', menu3Body:'每天現磨整顆黃豆並去除豆渣，口感更柔順、風味更乾淨。',
-        galleryEyebrow:'空間與製程', galleryTitle:'看看品牌、店面與熟成過程',
-        g1Title:'店內空間', g1Body:'以橘色、海軍藍與俐落線條打造快速又有質感的街頭美食氛圍。',
-        g2Title:'336:60 店面招牌', g2Body:'外觀清楚呈現品牌的 Slow 與 Fast 概念。',
-        g3Title:'336小時熟成', g3Body:'在地豬肉的熟成製程，是 336:60 最重要的品牌差異點之一。',
-        g4Title:'品牌櫥窗訊息', g4Body:'以強烈視覺傳達：336 小時的準備，只為 60 秒的期待與感動。',
-        storyEyebrow:'品牌故事', storyTitle:'以釜山在地食材做出的海雲臺原創',
-        storyP1:'336:60 位於海雲臺 Gunam-ro CGV 大樓 1 樓。品牌核心是一個鮮明對比：336 小時代表慢工熟成，60 秒代表街頭美食上桌的爽快節奏。',
-        storyP2:'代表食材為當日分切的金海在地豬肉，先在店內乾式熟成 336 小時，再進行分切與煙燻，做出香氣更濃、風味更立體的 K-BBQ 風格。',
-        storyP3:'醬料同樣帶有地方特色。336:60 使用機張大邊港鯷魚魚露做成起司醬與辣味醬，並將江原道風格的肉煎餅以釜山方式重新詮釋；每日現做的豆漿「또우장」也是品牌招牌之一。',
-        visitEyebrow:'前往店家', visitTitle:'就在海雲臺 Gunam-ro 核心地段', visitDesc:'位於海雲臺 Gunam-ro 的 CGV 大樓 1 樓，不論是海邊散步、看電影前後，或晚間美食巡禮都很方便順路造訪。',
-        addressLabel:'地址', addressText:'韓國釜山廣域市海雲臺區 Gunam-ro CGV 大樓 1 樓', mapLabel:'Google 地圖嵌入',
-        faqEyebrow:'FAQ', faqTitle:'第一次造訪的快速問答',
-        faq1q:'336:60 最有名的是什麼？', faq1a:'最具代表性的就是使用 336 小時熟成在地豬肉製作的王肉煎餅。',
-        faq2q:'有什麼特別之處？', faq2a:'品牌結合金海在地豬肉、336 小時熟成、店內煙燻、釜山在地醬料，以及每日現做豆漿。',
-        faq3q:'336:60 在哪裡？', faq3a:'位於釜山海雲臺 Gunam-ro 的 CGV 大樓 1 樓。',
-        finalTitle:'品嚐 336 小時慢工，享受 60 秒驚喜。', finalDesc:'如果你正在海雲臺尋找具有釜山風格的 K-BBQ 街頭美食，336:60 非常值得加入行程。',
-        finalBtn1:'開啟 Google 地圖', finalBtn2:'開啟 Naver Place',
-        footer:'© 336:60 · 海雲臺, 釜山 · English / 日本語 / 繁體中文'
+      tw:{
+        heroTag:'海雲臺 · 釜山在地 K-BBQ',
+        heroTitle:'慢慢熟成<em>336小時。</em><br>60秒就值得。',
+        heroDesc:'金海在地豬肉在店內乾式熟成336小時，再進行分切與煙燻，最後做成招牌王肉煎餅。這是一口為海雲臺而生的釜山風味。',
+        heroVisit:'查看海雲臺位置',heroMenu:'查看招牌餐點',
+        stat1:'乾式熟成',stat2:'在地豬肉',stat3:'店內煙燻',stat4:'釜山風味',
+        manifestoKicker:'336:60 的想法',manifestoTitle:'時間成就風味。<br>海雲臺成就這一刻。',manifestoBody:'熟成、分切、煙燻、調製醬料，重要的地方我們選擇慢慢做。完成後，則用最適合海雲臺節奏的街頭美食方式輕鬆享用。',
+        processKicker:'從在地豬肉到街頭美食',processTitle:'336:60 的做法',processIntro:'第一口之前，有四個關鍵。',
+        p1Title:'金海在地豬',p1Body:'招牌餐點從金海新鮮在地豬肉開始。',
+        p2Title:'336小時乾式熟成',p2Body:'在店內乾式熟成336小時，讓豬肉的鮮味更加集中。',
+        p3Title:'店內分切與煙燻',p3Body:'熟成後在店內分切並煙燻，帶出鮮明的K-BBQ香氣。',
+        p4Title:'醬料也有釜山味',p4Body:'使用機張大邊港鯷魚魚露，重新調製成起司醬與辣味醬。',
+        menuKicker:'招牌餐點',menuTitle:'單手拿著吃，風味卻很大。',menuIntro:'我們把韓式肉煎餅加入熟成煙燻豬肉與釜山風味，做成屬於海雲臺的一口。',
+        menu1Title:'王肉煎餅 · 起司',menu1Body:'煙燻熟成豬肉、新鮮蔬菜與滑順起司醬，一口就很有份量。',
+        menu2Title:'王肉煎餅 · 辣味',menu2Body:'同樣的煙燻豬肉搭配更有存在感的辣味醬，K-BBQ風格更加鮮明。',
+        drinkTag:'每日現做',drinkTitle:'自製豆漿 · 또우장',drinkBody:'每天現磨黃豆並去除豆渣，帶來乾淨、清爽又滑順的口感。',
+        spaceKicker:'店內空間',spaceTitle:'橘色的熱度。海軍藍的冷靜。',spaceIntro:'空間延續品牌的 Slow / Fast 對比，簡潔、俐落，也保留街頭感。',spaceCaption:'336:60 · 海雲臺 Gunam-ro',spaceCaptionBody:'海邊散步、逛街、看電影或晚間美食行程中，都很適合順路停下來。',
+        signBody:'336小時的準備，60秒的期待。這個反差，就是336:60的名字，也是品牌個性。',
+        agingKicker:'336小時',agingTitle:'等待，也是風味的一部分。',
+        storyKicker:'品牌故事',storyTitle:'在地食材。海雲臺節奏。',storyLabel1:'在地豬肉',storyText1:'以金海在地豬肉為主角，在店內乾式熟成336小時，讓鮮味在上火之前就慢慢累積。',storyLabel2:'釜山風味',storyText2:'使用機張大邊港鯷魚魚露製作招牌醬料，讓起司與辣味之中多一層釜山在地個性。',storyLabel3:'街頭美食',storyText3:'把韓式肉煎餅重新做成份量十足、帶煙燻香、方便邊走邊吃的海雲臺版本。',
+        visitKicker:'前往336:60',visitTitle:'就在海雲臺核心。',visitIntro:'位於海雲臺 Gunam-ro 的 CGV 大樓1樓。',addressLabel:'LOCATION',addressText:'韓國釜山廣域市海雲臺區 Gunam-ro CGV 大樓 1 樓',visitNote:'很適合排在海雲臺海邊散步、看電影或晚間美食行程中。',googleBtn:'Google 地圖',naverBtn:'Naver Place',
+        finalTitle:'慢慢做336小時。<br>海雲臺，輕鬆享用。',finalBody:'為煙燻豬肉而來，為釜山風味停留，再帶一口繼續你的海雲臺旅程。',finalGoogle:'查看路線',finalNaver:'查看 Naver Place',footer:'© 336:60 · 海雲臺, 釜山 · English / 日本語 / 繁體中文'
       }
     };
 
-    const buttons = document.querySelectorAll('.lang-switch button');
-    const nodes = document.querySelectorAll('[data-i18n]');
+    const buttons=document.querySelectorAll('.language button');
+    const nodes=document.querySelectorAll('[data-i18n]');
 
     function setLang(lang){
-      document.documentElement.lang = lang === 'jp' ? 'ja' : (lang === 'tw' ? 'zh-Hant' : 'en');
-      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
-      nodes.forEach(node => node.classList.add('fade'));
-      setTimeout(() => {
-        nodes.forEach(node => {
-          const key = node.dataset.i18n;
-          if (COPY[lang] && COPY[lang][key] !== undefined) node.innerHTML = COPY[lang][key];
+      document.documentElement.lang=lang==='jp'?'ja':lang==='tw'?'zh-Hant':'en';
+      buttons.forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
+      nodes.forEach(node=>node.classList.add('fade'));
+      window.setTimeout(()=>{
+        nodes.forEach(node=>{
+          const key=node.dataset.i18n;
+          if(COPY[lang] && Object.prototype.hasOwnProperty.call(COPY[lang],key)) node.innerHTML=COPY[lang][key];
           node.classList.remove('fade');
         });
-      }, 90);
+      },70);
     }
 
-    buttons.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+    buttons.forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.lang)));
   </script>
 </body>
 </html>
